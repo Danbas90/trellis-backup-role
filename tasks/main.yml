@@ -3,8 +3,8 @@
   set_fact:
     backup_user: root
 
-    backup_mysql_user: ""
-    backup_mysql_pass: ""
+    backup_mysql_user: "{{ mysql_root_user }}"
+    backup_mysql_pass: "{{ mysql_root_password }}"
 
     # Define the backup jobs
     backup_profiles:
