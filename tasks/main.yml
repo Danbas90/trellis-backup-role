@@ -6,6 +6,9 @@
     backup_mysql_user: "{{ mysql_root_user }}"
     backup_mysql_pass: "{{ mysql_root_password }}"
 
+    backup_env:
+      AWS_ACCESS_KEY_ID: "{{ site_env.aws_access_key | default(false) }}"
+      AWS_SECRET_ACCESS_KEY: "{{ site_env.aws_secret_key | default(false) }}"
     # Define the backup jobs
     backup_profiles:
     # Backup uploads
