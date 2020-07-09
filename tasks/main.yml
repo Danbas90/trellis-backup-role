@@ -1,7 +1,7 @@
 ---
 - name: List backup jobs
   set_fact:
-    backup_user: "{{admin_user}}"
+    backup_user: "root"
 
     backup_mysql_user: "{{ mysql_root_user }}"
     backup_mysql_pass: "{{ mysql_root_password }}"
